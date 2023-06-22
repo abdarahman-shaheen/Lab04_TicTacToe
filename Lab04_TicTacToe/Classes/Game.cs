@@ -41,7 +41,14 @@ namespace Lab04_TicTacToe.Classes
                 player.TakeTurn(Board);
                 SwitchPlayer();
 
+                if (counter == 9)
+                {
+                    Board.DisplayBoard();
+                    return null;
+                }
+
             }
+           
             Board.DisplayBoard();
 			Winner = player;
 			return player;
